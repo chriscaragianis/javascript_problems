@@ -6,9 +6,15 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-//
-// YOUR CODE GOES HERE
-//
+  if (input === input.toUpperCase() && input !== input.toLowerCase()) {
+    return "Whoa, chill out!";
+  } else if (input.substring(input.length - 1) === '?') {
+    return 'Sure.';
+  } else if (input.trim() === '') {
+    return 'Fine. Be that way!';
+  } else {
+   return "Whatever.";
+  } 
 };
 
 module.exports = Bob;
